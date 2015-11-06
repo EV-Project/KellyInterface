@@ -1,0 +1,431 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Artifactory
+LIBS:KellyInterface-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title "EV Wheel Manager"
+Date "6 nov 2015"
+Rev "0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L R R?
+U 1 1 563C0D01
+P 1550 5100
+F 0 "R?" V 1630 5100 40  0000 C CNN
+F 1 "10K" V 1557 5101 40  0000 C CNN
+F 2 "~" V 1480 5100 30  0000 C CNN
+F 3 "~" H 1550 5100 30  0000 C CNN
+	1    1550 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L DIODE D?
+U 1 1 563C0D02
+P 2100 3800
+F 0 "D?" H 2100 3900 40  0000 C CNN
+F 1 "DIODE" H 2100 3700 40  0000 C CNN
+F 2 "~" H 2100 3800 60  0000 C CNN
+F 3 "~" H 2100 3800 60  0000 C CNN
+	1    2100 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 563C0D03
+P 1500 3700
+F 0 "C?" H 1500 3800 40  0000 L CNN
+F 1 "10uF" H 1506 3615 40  0000 L CNN
+F 2 "~" H 1538 3550 30  0000 C CNN
+F 3 "~" H 1500 3700 60  0000 C CNN
+	1    1500 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 563C0D04
+P 2100 4100
+F 0 "#PWR?" H 2100 4100 30  0001 C CNN
+F 1 "GND" H 2100 4030 30  0001 C CNN
+F 2 "" H 2100 4100 60  0000 C CNN
+F 3 "" H 2100 4100 60  0000 C CNN
+	1    2100 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIODE D?
+U 1 1 563C0D05
+P 1800 3500
+F 0 "D?" H 1800 3600 40  0000 C CNN
+F 1 "DIODE" H 1800 3400 40  0000 C CNN
+F 2 "~" H 1800 3500 60  0000 C CNN
+F 3 "~" H 1800 3500 60  0000 C CNN
+	1    1800 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L NPN Q?
+U 1 1 563C0D06
+P 1100 3500
+F 0 "Q?" H 1100 3350 50  0000 R CNN
+F 1 "NPN" H 1100 3650 50  0000 R CNN
+F 2 "~" H 1100 3500 60  0000 C CNN
+F 3 "~" H 1100 3500 60  0000 C CNN
+	1    1100 3500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 3500 2000 3500
+Wire Wire Line
+	1300 3500 1600 3500
+$Comp
+L C C?
+U 1 1 563C0D07
+P 2300 3500
+F 0 "C?" H 2300 3600 40  0000 L CNN
+F 1 "1uF" H 2306 3415 40  0000 L CNN
+F 2 "~" H 2338 3350 30  0000 C CNN
+F 3 "~" H 2300 3500 60  0000 C CNN
+	1    2300 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2100 4000 2100 4100
+Wire Wire Line
+	1000 4000 2100 4000
+Wire Wire Line
+	1500 4000 1500 3900
+Wire Wire Line
+	2100 3600 2100 3500
+$Comp
+L R R?
+U 1 1 563C0D08
+P 1750 3300
+F 0 "R?" V 1830 3300 40  0000 C CNN
+F 1 "10K" V 1757 3301 40  0000 C CNN
+F 2 "~" V 1680 3300 30  0000 C CNN
+F 3 "~" H 1750 3300 30  0000 C CNN
+	1    1750 3300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 563C0D09
+P 2000 3200
+F 0 "#PWR?" H 2000 3290 20  0001 C CNN
+F 1 "+5V" H 2000 3290 30  0000 C CNN
+F 2 "" H 2000 3200 60  0000 C CNN
+F 3 "" H 2000 3200 60  0000 C CNN
+	1    2000 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 3200 2000 3300
+Wire Wire Line
+	1500 3500 1500 3300
+Connection ~ 1500 3500
+Wire Wire Line
+	1000 3700 1000 4000
+Connection ~ 1500 4000
+Text GLabel 1000 3100 2    60   Input ~ 0
+WATCHDOG
+Wire Wire Line
+	1000 3100 1000 3300
+$Comp
+L NPN Q?
+U 1 1 563C0D0A
+P 1400 5400
+F 0 "Q?" H 1400 5250 50  0000 R CNN
+F 1 "NPN" H 1400 5550 50  0000 R CNN
+F 2 "~" H 1400 5400 60  0000 C CNN
+F 3 "~" H 1400 5400 60  0000 C CNN
+	1    1400 5400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 563C0D0B
+P 1950 5400
+F 0 "R?" V 2030 5400 40  0000 C CNN
+F 1 "10K" V 1957 5401 40  0000 C CNN
+F 2 "~" V 1880 5400 30  0000 C CNN
+F 3 "~" H 1950 5400 30  0000 C CNN
+	1    1950 5400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1300 5200 1200 5200
+$Comp
+L GND #PWR?
+U 1 1 563C0D0C
+P 1300 5700
+F 0 "#PWR?" H 1300 5700 30  0001 C CNN
+F 1 "GND" H 1300 5630 30  0001 C CNN
+F 2 "" H 1300 5700 60  0000 C CNN
+F 3 "" H 1300 5700 60  0000 C CNN
+	1    1300 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 5700 1300 5600
+Wire Wire Line
+	2500 3500 3050 3500
+$Comp
+L NPN Q?
+U 1 1 563C0D0D
+P 1400 7000
+F 0 "Q?" H 1400 6850 50  0000 R CNN
+F 1 "NPN" H 1400 7150 50  0000 R CNN
+F 2 "~" H 1400 7000 60  0000 C CNN
+F 3 "~" H 1400 7000 60  0000 C CNN
+	1    1400 7000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 563C0D0E
+P 1950 7000
+F 0 "R?" V 2030 7000 40  0000 C CNN
+F 1 "10K" V 1957 7001 40  0000 C CNN
+F 2 "~" V 1880 7000 30  0000 C CNN
+F 3 "~" H 1950 7000 30  0000 C CNN
+	1    1950 7000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1300 6800 1200 6800
+$Comp
+L GND #PWR?
+U 1 1 563C0D0F
+P 1300 7300
+F 0 "#PWR?" H 1300 7300 30  0001 C CNN
+F 1 "GND" H 1300 7230 30  0001 C CNN
+F 2 "" H 1300 7300 60  0000 C CNN
+F 3 "" H 1300 7300 60  0000 C CNN
+	1    1300 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 7300 1300 7200
+Wire Wire Line
+	2300 7000 2200 7000
+$Comp
+L 74HC04 U?
+U 1 1 563C0D10
+P 2250 4500
+F 0 "U?" H 2400 4600 40  0000 C CNN
+F 1 "74HC04" H 2450 4400 40  0000 C CNN
+F 2 "~" H 2250 4500 60  0000 C CNN
+F 3 "~" H 2250 4500 60  0000 C CNN
+	1    2250 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74HC04 U?
+U 1 1 563C0D11
+P 2250 4900
+F 0 "U?" H 2400 5000 40  0000 C CNN
+F 1 "74HC04" H 2450 4800 40  0000 C CNN
+F 2 "~" H 2250 4900 60  0000 C CNN
+F 3 "~" H 2250 4900 60  0000 C CNN
+	1    2250 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 4900 2700 4700
+Wire Wire Line
+	1800 4700 1800 4500
+Wire Wire Line
+	2800 4500 2700 4500
+Wire Wire Line
+	1800 5100 1800 4900
+Wire Wire Line
+	2300 5400 2200 5400
+Wire Wire Line
+	1600 7000 1700 7000
+Wire Wire Line
+	1700 5400 1600 5400
+$Comp
+L R R?
+U 1 1 563C0D12
+P 1550 6700
+F 0 "R?" V 1630 6700 40  0000 C CNN
+F 1 "10K" V 1557 6701 40  0000 C CNN
+F 2 "~" V 1480 6700 30  0000 C CNN
+F 3 "~" H 1550 6700 30  0000 C CNN
+	1    1550 6700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1300 6700 1300 6800
+$Comp
+L 74HC04 U?
+U 1 1 563C0D13
+P 2250 6500
+F 0 "U?" H 2400 6600 40  0000 C CNN
+F 1 "74HC04" H 2450 6400 40  0000 C CNN
+F 2 "~" H 2250 6500 60  0000 C CNN
+F 3 "~" H 2250 6500 60  0000 C CNN
+	1    2250 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 6700 1800 6500
+$Comp
+L 74HC04 U?
+U 1 1 563C0D14
+P 2250 6100
+F 0 "U?" H 2400 6200 40  0000 C CNN
+F 1 "74HC04" H 2450 6000 40  0000 C CNN
+F 2 "~" H 2250 6100 60  0000 C CNN
+F 3 "~" H 2250 6100 60  0000 C CNN
+	1    2250 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 6500 2700 6300
+Wire Wire Line
+	2700 6300 1800 6300
+Wire Wire Line
+	1800 6300 1800 6100
+Wire Wire Line
+	2800 6100 2700 6100
+Wire Wire Line
+	2700 4700 1800 4700
+Wire Wire Line
+	2800 4900 2700 4900
+Wire Wire Line
+	1300 5100 1300 5200
+Text GLabel 5100 6150 2    60   Input ~ 0
+Pots_~SHDN~
+Text GLabel 5100 5350 2    60   Input ~ 0
+WATCHDOG
+Text GLabel 5100 6950 2    60   Input ~ 0
+Motor_Disable
+Text Notes 3900 4950 0    60   ~ 0
+Enable the Watchdog timer to force a Shutdown/Estop
+Text Notes 3950 5800 0    60   ~ 0
+Zero the Pots on Shutdown/Estop
+Text Notes 3950 6600 0    60   ~ 0
+Signal a Motor-overtemp disable on Shutdown/Estop
+Wire Wire Line
+	2800 6500 2700 6500
+$Comp
+L GS3 GS?
+U 1 1 563C0D15
+P 4750 5350
+F 0 "GS?" H 4800 5550 50  0000 C CNN
+F 1 "WD_select" H 4800 5151 40  0000 C CNN
+F 2 "GS3" V 4838 5276 30  0000 C CNN
+F 3 "" H 4750 5350 60  0000 C CNN
+	1    4750 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 5350 4900 5350
+Wire Wire Line
+	4600 5250 4400 5250
+Wire Wire Line
+	4600 5450 4400 5450
+$Comp
+L GS3 GS?
+U 1 1 563C0D16
+P 4750 6150
+F 0 "GS?" H 4800 6350 50  0000 C CNN
+F 1 "POT_select" H 4800 5951 40  0000 C CNN
+F 2 "GS3" V 4838 6076 30  0000 C CNN
+F 3 "" H 4750 6150 60  0000 C CNN
+	1    4750 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GS3 GS?
+U 1 1 563C0D17
+P 4750 6950
+F 0 "GS?" H 4800 7150 50  0000 C CNN
+F 1 "INH_select" H 4800 6751 40  0000 C CNN
+F 2 "GS3" V 4838 6876 30  0000 C CNN
+F 3 "" H 4750 6950 60  0000 C CNN
+	1    4750 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 6050 4600 6050
+Wire Wire Line
+	4400 6250 4600 6250
+Wire Wire Line
+	4400 7050 4600 7050
+Wire Wire Line
+	4600 6850 4400 6850
+Wire Wire Line
+	5100 6150 4900 6150
+Wire Wire Line
+	5100 6950 4900 6950
+Text HLabel 1200 5200 0    60   Input ~ 0
+SHDN_RAIL
+Text HLabel 1200 6800 0    60   Input ~ 0
+ESTOP_RAIL
+Text HLabel 2800 4900 2    60   Input ~ 0
+SHDN_Pin
+Text HLabel 2800 4500 2    60   Input ~ 0
+~SHDN~_Pin
+Text HLabel 2800 6500 2    60   Input ~ 0
+ESTOP_Pin
+Text HLabel 2800 6100 2    60   Input ~ 0
+~ESTOP~_Pin
+Text HLabel 2300 7000 2    60   Input ~ 0
+ESTOP_Set
+Text HLabel 2300 5400 2    60   Input ~ 0
+SHDN_Set
+Text HLabel 4400 6250 0    60   Input ~ 0
+~ESTOP~_Pin
+Text HLabel 4400 6050 0    60   Input ~ 0
+~SHDN~_Pin
+Text HLabel 4400 5450 0    60   Input ~ 0
+ESTOP_RAIL
+Text HLabel 4400 5250 0    60   Input ~ 0
+SHDN_RAIL
+Text HLabel 4400 6850 0    60   Input ~ 0
+SHDN_Pin
+Text HLabel 4400 7050 0    60   Input ~ 0
+ESTOP_Pin
+Text HLabel 3050 3500 2    60   Input ~ 0
+WATCHDOG_Pulse
+$EndSCHEMATC
