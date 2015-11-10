@@ -1,11 +1,6 @@
-update=Wed 04 Nov 2015 16:13:43 AWST
+update=Tue 10 Nov 2015 14:02:13 AWST
 version=1
 last_client=eeschema
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
 LastNetListRead=
@@ -26,7 +21,6 @@ DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
 [pcbnew/libraries]
-LibDir=
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -34,17 +28,22 @@ LibName4=pin_array
 LibName5=divers
 LibName6=smd_capacitors
 LibName7=smd_resistors
-LibName8=smd_crystal&oscillator
-LibName9=smd_dil
-LibName10=smd_transistors
-LibName11=libcms
-LibName12=display
-LibName13=led
-LibName14=dip_sockets
-LibName15=pga_sockets
-LibName16=valves
+LibName8=smd_transistors
+LibName9=libcms
+LibName10=display
+LibName11=led
+LibName12=dip_sockets
+LibName13=pga_sockets
+LibName14=valves
+LibName15=Artifactory
+LibDir=/home/brettrd/Documents/Projects/KiCadLibs
 [general]
 version=1
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=/home/brettrd/Documents/Projects/KiCadLibs
